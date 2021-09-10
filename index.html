@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css">
+
+		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body data-background="#fffff">
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Saludos!!</h1>
+				</section>
+				<section>
+					<h1>Sistema Web Transaccional</h1>
+					<h2>Farmacia Saori</h2>
+				</section>
+				<section>
+					<h2>Puntos a Abordar</h2>
+					<ul>
+						<li class="fragment">Alcances y Limitante</li>
+						<li class="fragment">Requerimientos Minimos</li>
+						<li class="fragment">Casos de uso - Contexto General</li>
+						<li class="fragment">Base de Datos</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Alcances</h2>
+						<ul>
+							<li class="fragment">El sistema llevará el control de los laboratorios que tiene como proveedores principales la farmacia.</li>
+							<li class="fragment">El sistema podrá registrar la factura de los productos y generarla físicamente.</li>
+							<li class="fragment">El sistema podrá llevar el control del inventario de los fármacos.</li>
+							<li class="fragment">El sistema tendrá alertas para los fármacos próximos a vencer.</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment">El sistema podrá permitir el pago en moneda nacional como extranjera.</li>
+							<li class="fragment">El sistema podrá realizar los reportes más indispensables para el negocio (venta, productos más vendidos, productos próximos a vencer, productos agotados).</li>
+							<li class="fragment">El sistema permitirá tener un control de los usuarios y brindará seguridad de los datos.</li>
+							<li class="fragment">El sistema registrará los pedidos a los proveedores.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Limitantes</h2>
+						<ul>
+							<li class="fragment">El sistema no realiza pedidos en línea.</li>
+							<li class="fragment">El sistema no contempla las ventas en línea.</li>
+							<li class="fragment">•	El sistema no incluirá las ventas al crédito. </li>
+						</ul>
+					</section>
+					<section style="align-items:center;">
+						<h2>Requerimientos Mínimos</h2>
+						<p class="fragment">Entre los principales módulos tenemos:</p>
+						<ul>
+							<img src="examples/Modulos-02.png" alt="" style="width: 80%;">
+						</ul>
+					</section>
+					<section>
+						<img src="" alt="">
+						<h2>Módulo de Ventas</h2>
+						<p class="fragment">Entre los Principales elementos tenemos:</p>
+						<p class="fragment">Nombre del cliente, nombre empleado, fecha de venta, subtotal, descuento, IVA, total, nombre genérico, forma de pago, cantidad-venta, precio-venta </p>
+					</section>
+					<section>
+						<h2>Reportes Generados en este módulo:</h2>
+						<ul class="fragment">
+							<li>Informe de venta General</li>
+							<li>Informe Ventas Diarias, Mes, Rango</li>
+							<li>Informe ventas por empleado </li>
+							<li>Informe facturas anuladas</li>
+							<li>Informe de venta por cliente</li>
+							<li>Informe de devolución</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Módulo de Compras</h2>
+						<p class="fragment">Entre los Principales elementos tenemos:</p>
+						<p class="fragment">Proveedor, nombre fármaco, forma de pago, cantidad-compra, precio-compra lote, descuento, IVA y total.</p>
+					</section>
+					<section>
+						<h2>Reportes Generados en este módulo:</h2>
+						<ul class="fragment">
+							<li>Informe de Compra</li>
+							<li>Reportes semanales, mensuales o Rango</li>
+							<li>Informe de devolución</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Módulo de administración general</h2>
+						<p class="fragment">Entre las Principales acciones en el sistema:</p>
+						<p class="fragment">Administración de Usuarios,Fármacos, Categorías, Clientes, Laboratorio y Proveedores</p>
+					</section>
+					<section>
+						<h2>Reportes Generados en este módulo:</h2>
+						<ul class="fragment">
+							<li>Informe de fármacos </li>
+							<li>Informe de proveedores</li>
+							<li>Informe de categorías</li>
+							<li>Informe de empleados, clientes</li>
+							<li>Informe de laboratorios</li>
+							<li>Informe de productos próximos a vencer</li>
+							<li>Informe de productos vencidos </li>
+						</ul>
+					</section>
+					<section>
+						<h2>Módulo de procesamiento analítico</h2>
+						<p class="fragment">Contempla los modelos actuales de negocio, para la toma de decisiones a partir de: </p>
+						<p class="fragment">Ventas, Compras, Transacciones, Stock y Facturas. </p>
+					</section>
+					<section>
+						<h2>Reportes Generados en este módulo:</h2>
+						<ul class="fragment">
+							<li>Informe de productos más vendidos </li>
+							<li>Informe de clientes con más compras</li>
+							<li>Informe de transacciones recientes  </li>
+						</ul>
+					</section>
+					<section>
+						<h2>Módulo de Seguridad</h2>
+						<p class="fragment">Este módulo contempla una gran complejidad por una serie de tablas y datos que se deben mantener:</p>
+						<p class="fragment">Gestión de los inicios de sesión de los usuarios en el servidor SQL y los permisos de cada uno de los individuos es primordial ya que se basa en manipulación de contenido. </p>
+					</section>
+					<section>
+						<h2>Reportes Generados en este módulo:</h2>
+						<ul class="fragment">
+							<li>Informe de seguridad</li>
+							<li>Informe de accesos al sistema</li>
+							<li>Informe de usuarios y roles </li>
+						</ul>
+					</section>
+					<section>
+						<h2>Módulo de Reportes</h2>
+						<p class="fragment">Desde este módulo se pueden diseñar y producir listados o Reportes basados en las diferentes tablas de la base de datos, mencionados anteriormente en cada módulo.</p>
+					</section>
+					<section>
+						<h2>Reportes Generados en este módulo:</h2>
+						<ul class="fragment">
+							<li>Reporte de ventas </li>
+							<li>Reporte de compras </li>
+							<li>Reporte de Administración general</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Caso de Uso</h2>
+					</section>
+					<section>
+						<img src="examples/Caso_De_Uso0.png" alt="" style="width: 40%;">
+					</section>
+					<section>
+						<img src="examples/Caso_de_Uso1.png" alt="" style="width: 70%;">
+					</section>
+					<section>
+						<img src="examples/Caso_de_Uso2.png" alt="" style="width: 70%;">
+					</section>
+				</section>
+				<section>
+					<h1>Base de Datos</h1>
+				</section>
+				<section>
+					<h1></h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
